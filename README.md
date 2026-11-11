@@ -8,7 +8,7 @@
 The backend requires Python and Flask to analyze the text.
 
 1. Open a terminal and navigate to the `backend` folder:
-   `cd d:\Harshit\FakeInternshipDetector\backend`
+   From the project root, run `cd backend`.
 
 2. (Optional) Create and activate a virtual environment:
    `python -m venv venv`
@@ -25,7 +25,7 @@ The backend requires Python and Flask to analyze the text.
 1. Open your Chromium-based browser (Chrome, Edge, Brave, etc.).
 2. Go to `chrome://extensions/` (or `edge://extensions/`).
 3. Enable **Developer mode** (usually a toggle in the top right corner).
-4. Click **Load unpacked** and select the `d:\Harshit\FakeInternshipDetector\extension` folder.
+4. Click **Load unpacked** and select the `extension` folder inside the project folder.
 5. The Scam Detector extension will be added to your browser. You can pin it for quick access!
 
 ## Usage
