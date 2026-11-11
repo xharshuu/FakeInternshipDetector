@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam Detector</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <h1>Scam Detector</h1>
+            </div>
+            <p class="subtitle">ML-powered internship & course scam scanner</p>
+        </header>
+
+        <main>
+            <button id="scanBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span class="btn-text">Scan This Page</span>
+                <div class="loader" id="btnLoader" style="display: none;"></div>
+            </button>
+
+            <div id="resultCard" class="result-card hidden">
+                <div class="result-header">
+                    <span id="shieldIcon" class="shield-icon"></span>
+                    <h2 id="resultTitle">Analyzing...</h2>
+                </div>
+                <div class="score-container">
+                    <div class="score-ring" id="scoreRing">
+                        <svg viewBox="0 0 120 120">
+                            <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                            <circle class="ring-fill" id="ringFill" cx="60" cy="60" r="52"></circle>
+                        </svg>
+                        <span id="riskScore" class="score-number">0</span>
+                    </div>
+                    <span class="score-label">Risk Score</span>
+                </div>
+                <p id="resultHint" class="result-hint"></p>
+            </div>
+        </main>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

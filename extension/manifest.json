@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Internship Scam Detector",
+  "version": "2.1",
+  "description": "ML-powered extension that detects fake internship or course offers on any webpage.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Scan This Page"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:5000/*",
+    "http://localhost:5000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
